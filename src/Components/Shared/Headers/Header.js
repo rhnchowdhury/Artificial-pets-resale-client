@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const menuItems = <React.Fragment>
-        <li><a>Home</a></li>
-        <li><a>Blog</a></li>
-        <li><a>Login</a></li>
+        <li><Link>Home</Link></li>
+        <li><Link>Blog</Link></li>
+        <li><Link>Login</Link></li>
     </React.Fragment>
     return (
         <div>
@@ -18,7 +19,7 @@ const Header = () => {
                             {menuItems}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <Link className="btn btn-ghost normal-case text-xl">daisyUI</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -26,7 +27,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Get started</a>
+                    <Link className="btn">Get started</Link>
                 </div>
             </div>
         </div>
