@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     const menuItems = <React.Fragment>
-        <li><Link>Home</Link></li>
-        <li><Link>Blog</Link></li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/blog'>Blog</Link></li>
         <li><Link>Login</Link></li>
     </React.Fragment>
     return (
