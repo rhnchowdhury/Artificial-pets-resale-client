@@ -3,22 +3,22 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
 const SignUp = () => {
-    const { register, handleSubmit } = useForm();
-    const handleSignin = data => {
+    const { register, formState: { errors }, handleSubmit } = useForm();
+    const handleSignIn = data => {
         console.log(data)
     }
     return (
         <div className='flex justify-center items-center my-20'>
             <div>
                 <h1 className="text-4xl font-bold text-center text-orange-600">Sign Up!</h1>
-                <form onSubmit={handleSubmit(handleSignin)}>
+                <form onSubmit={handleSubmit(handleSignIn)}>
                     <div>
                         <label className="label"><span className="label-text">Name</span></label>
                         <input type='text' {...register("name", {
                             required: "Name is required"
                         })}
                             className="input input-bordered w-full max-w-xs" />
-                        {/* {errors.name && <p className='text-error'>{errors.name?.message}</p>} */}
+                        {errors.name && <p className='text-error'>{errors.name?.message}</p>}
                     </div>
                     <div>
                         <label className="label"><span className="label-text">Email</span></label>
@@ -26,7 +26,7 @@ const SignUp = () => {
                             required: "Email is required",
                         })}
                             className="input input-bordered w-full max-w-xs" />
-                        {/* {errors.email && <p className='text-error'>{errors.email?.message}</p>} */}
+                        {errors.email && <p className='text-error'>{errors.email?.message}</p>}
                     </div>
                     <div>
                         <label className="label"><span className="label-text">Password</span></label>
@@ -36,7 +36,7 @@ const SignUp = () => {
                             pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: "Password must be strong" }
                         })}
                             className="input input-bordered w-full max-w-xs" />
-                        {/* {errors.password && <p className='text-error'>{errors.password?.message}</p>} */}
+                        {errors.password && <p className='text-error'>{errors.password?.message}</p>}
                     </div>
                     <input className='btn btn-active mt-4 w-full max-w-xs' value='Sign Up' type="submit" />
                     {/* {signError && <p className='text-error'>{signError}</p>} */}
