@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
     const { register, handleSubmit } = useForm();
+
+    const handleLogin = data => {
+        console.log(data)
+    }
     return (
         <div className='flex justify-center items-center my-20'>
             <div>
-                <form onSubmit={handleSubmit()}>
+                <form onSubmit={handleSubmit(handleLogin)}>
                     <div>
                         <label className="label"><span className="label-text">Name</span></label>
                         <input type='text' {...register("name",

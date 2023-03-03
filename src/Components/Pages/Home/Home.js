@@ -1,9 +1,10 @@
 import React from 'react';
+import Slider from '../Sliders/Slider';
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home and join</h1>
+            {/* <Slider></Slider> */}
         </div>
     );
 };
