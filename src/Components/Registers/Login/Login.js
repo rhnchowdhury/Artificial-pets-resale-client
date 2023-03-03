@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
@@ -6,15 +6,20 @@ import { AuthContext } from '../../../Context/AuthProvider';
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { login } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState('');
 
-    const handleLogin = data => {
+    const handleLogin = (data, e) => {
         console.log(data)
+        e.target.reset();
+        setLoginError('');
         login(data.email, data.password)
             .then(res => {
                 const user = res.user;
                 console.log(user)
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                setLoginError(err.message);
+            });
     }
     return (
         <div className='flex justify-center items-center my-20'>
@@ -51,7 +56,7 @@ const Login = () => {
                         <label className="label"><span className="label-text">Forget password?</span></label>
                     </div>
                     <input className='btn btn-active w-full max-w-xs' value='Login' type="submit" />
-                    {/* {loginError && <p className='text-error'>{loginError}</p>} */}
+                    {loginError && <p className='text-error'>{loginError}</p>}
                     <p>New to mobile garage? <Link to='/signup' className='text-orange-600 font-bold'>Create an account</Link></p>
                 </form>
             </div>

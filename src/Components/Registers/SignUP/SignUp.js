@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
@@ -6,15 +6,20 @@ import { AuthContext } from '../../../Context/AuthProvider';
 const SignUp = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { createUser } = useContext(AuthContext);
+    const [signError, setSignError] = useState('');
 
-    const handleSignIn = data => {
+    const handleSignIn = (data, e) => {
         console.log(data)
+        e.target.reset();
+        setSignError('');
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
             })
-            .catch(err => console.error(err));
+            .catch(err => {
+                setSignError(err.message)
+            });
     }
     return (
         <div className='flex justify-center items-center my-20'>
@@ -48,7 +53,7 @@ const SignUp = () => {
                         {errors.password && <p className='text-error'>{errors.password?.message}</p>}
                     </div>
                     <input className='btn btn-active mt-4 w-full max-w-xs' value='Sign Up' type="submit" />
-                    {/* {signError && <p className='text-error'>{signError}</p>} */}
+                    {signError && <p className='text-error'>{signError}</p>}
                     <p>Already have an account? <Link to='/login' className='text-accent font-bold'>Please Login</Link></p>
                 </form>
             </div>
