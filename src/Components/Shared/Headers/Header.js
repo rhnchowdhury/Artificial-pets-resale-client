@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Context/AuthProvider';
 
 const Header = () => {
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(err => console.error(err));
+    };
 
     const menuItems = <React.Fragment>
         <li><Link to='/'>Home</Link></li>
@@ -11,7 +17,7 @@ const Header = () => {
         {user?.uid ?
             <>
                 <li><Link to='/dashboard' className=''>Dashboard</Link></li>
-                {/* <li><button onClick={handleLogOut} className='text-white text-md font-semibold'>Sign Out</button></li> */}
+                <li><Link onClick={handleLogOut}>Sign Out</Link></li>
             </>
             :
             <li><Link to='/login' className='\'>Log in</Link></li>}
