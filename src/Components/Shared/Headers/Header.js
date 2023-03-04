@@ -12,16 +12,18 @@ const Header = () => {
     };
 
     const menuItems = <React.Fragment>
-        <li><Link to='/' className='text-white' style={{ background: '#F9575C', borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Home</Link></li>
-        <li><Link to='/blog' className='text-white' >Blog</Link></li>
-        {user?.uid ?
-            <>
-                <li><Link to='/dashboard' className='text-white'>Dashboard</Link></li>
-                <li><Link onClick={handleLogOut} className='text-white'>Sign Out</Link></li>
-            </>
-            :
-            <li><Link to='/login' className='text-white'>Log in</Link></li>}
-    </React.Fragment>
+        <li><Link to='/' className='text-white bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Home</Link></li>
+        <li><Link to='/blog' className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Blog</Link></li>
+        {
+            user?.uid ?
+                <>
+                    <li><Link to='/dashboard' className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Dashboard</Link></li>
+                    <li><Link onClick={handleLogOut} className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sign Out</Link></li>
+                </>
+                :
+                <li><Link to='/login' className='text-white'>Log in</Link></li>
+        }
+    </React.Fragment >
     return (
         <div>
             <div className="navbar" style={{ background: '#F9BE4F' }}>
