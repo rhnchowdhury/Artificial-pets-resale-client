@@ -4,7 +4,7 @@ import Slider from '../Sliders/Slider';
 const Home = () => {
     return (
         <div>
-            {/* <Slider></Slider> */}
+            <Slider></Slider>
         </div>
     );
 };
