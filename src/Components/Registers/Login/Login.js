@@ -62,7 +62,7 @@ const Login = () => {
                     </div>
                     <input className='btn btn-active w-full max-w-xs' value='Login' type="submit" />
                     {loginError && <p className='text-error'>{loginError}</p>}
-                    <p>New to mobile garage? <Link to='/signup' className='text-orange-600 font-bold'>Create an account</Link></p>
+                    <p>New to Artificial Pets? <Link to='/signup' className='text-orange-600 font-bold'>Create an account</Link></p>
                 </form>
             </div>
 
