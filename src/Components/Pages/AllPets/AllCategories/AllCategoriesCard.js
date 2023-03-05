@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AllCategoriesCard = ({ category }) => {
+const AllCategoriesCard = ({ category, setBooked }) => {
     const { use, seller, image, title, year, resale_price, original_price, location } = category;
     return (
         <div className='card-actions justify-center'>
@@ -15,7 +15,10 @@ const AllCategoriesCard = ({ category }) => {
                     <p><strong>Years of use: </strong>{use}</p>
                     <p><strong>Posted Date: </strong>{year}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn bg-red-400 hover:bg-yellow-500" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px', border: '0px solid rgb(248, 63, 124)' }}>Book now!</button>
+                        <label htmlFor="booking-modal" className="btn bg-red-400 hover:bg-yellow-500"
+                            onClick={() => setBooked(category)}
+                            style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px', border: '0px solid rgb(248, 63, 124)' }}
+                        >Book now!</label>
                     </div>
                 </div>
             </div>
