@@ -5,7 +5,7 @@ const Category = () => {
     const [pets, setPets] = useState([]);
 
     useEffect(() => {
-        fetch('single.json')
+        fetch('http://localhost:5000/list')
             .then(res => res.json())
             .then(data => {
                 console.log(data)
