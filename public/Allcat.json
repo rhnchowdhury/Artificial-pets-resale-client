@@ -1,0 +1,272 @@
+[
+    {
+        "seller": "Anne Baker",
+        "cate_id": "1",
+        "image": "https://ibb.co/48Bs1Xd",
+        "title": "Ragdoll cat",
+        "year": 1960,
+        "location": "California",
+        "resale_price": "$170",
+        "original_price": "$250"
+    },
+    {
+        "seller": "Brian Sterling",
+        "cate_id": "1",
+        "image": "https://ibb.co/cyHsmzF",
+        "title": "Himalayan cat",
+        "year": 1930,
+        "location": "Europe",
+        "resale_price": "$580",
+        "original_price": "$655"
+    },
+    {
+        "seller": " Achaemenid Persian",
+        "cate_id": "1",
+        "image": "https://ibb.co/ftWcnBF",
+        "title": "Persian cat",
+        "year": 1660,
+        "location": "Iran",
+        "resale_price": "$160",
+        "original_price": "$190"
+    },
+    {
+        "seller": "Amy Vanderbilt",
+        "cate_id": "1",
+        "image": "https://ibb.co/QYPMgpx",
+        "title": "Birman cat",
+        "year": 1966,
+        "location": "Myanmar",
+        "resale_price": "$155",
+        "original_price": "$180"
+    },
+    {
+        "seller": " Allyce Beasley",
+        "cate_id": "1",
+        "image": "https://ibb.co/mb1tYGb",
+        "title": "Selkirk Rex cat",
+        "year": 1987,
+        "location": "Montana",
+        "resale_price": "$150",
+        "original_price": "$250"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "1",
+        "image": "https://ibb.co/4MN5TGL",
+        "title": "Ragamuffin cat",
+        "year": 1994,
+        "location": "California",
+        "resale_price": "$500",
+        "original_price": "$600"
+    },
+    {
+        "seller": "Helgren",
+        "cate_id": "1",
+        "image": "https://ibb.co/QYPMgpx",
+        "title": "Exotic Longhair cat",
+        "year": 1960,
+        "location": "California",
+        "resale_price": "$400",
+        "original_price": "$650"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "1",
+        "image": "https://ibb.co/tpSKMQZ",
+        "title": "Turkish Angora",
+        "year": 2000,
+        "location": "Turkey",
+        "resale_price": "$450",
+        "original_price": "$550"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "1",
+        "image": "https://ibb.co/N3JtWzh",
+        "title": "Napoleon Cat",
+        "year": 2008,
+        "location": "Nepal",
+        "resale_price": "$550",
+        "original_price": "$700"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "2",
+        "image": "https://ibb.co/fYS5CGz",
+        "title": "Pug Resin Dog",
+        "year": 2009,
+        "location": "Dhaka",
+        "resale_price": "$550",
+        "original_price": "$700"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "2",
+        "image": "https://ibb.co/LCwVfhL",
+        "title": "Samoyed Dog",
+        "year": 2010,
+        "location": "Dhaka",
+        "resale_price": "$500",
+        "original_price": "$600"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "2",
+        "image": "https://ibb.co/8chrCcn",
+        "title": "Australian Shepherd",
+        "year": 1999,
+        "location": "Dhaka",
+        "resale_price": "$700",
+        "original_price": "$900"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "2",
+        "image": "https://ibb.co/6v3LMKm",
+        "title": "Pembroke Welsh Corgi",
+        "year": 2000,
+        "location": "Dhaka",
+        "resale_price": "$500",
+        "original_price": "$700"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "2",
+        "image": "https://ibb.co/1X1S2vr",
+        "title": "Border Collie",
+        "year": 2002,
+        "location": "Dhaka",
+        "resale_price": "$400",
+        "original_price": "$600"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "2",
+        "image": "https://ibb.co/DzpPpRb",
+        "title": "Old English Sheepdog",
+        "year": 2006,
+        "location": "Dhaka",
+        "resale_price": "$450",
+        "original_price": "$650"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "2",
+        "image": "https://ibb.co/0FFmFRr",
+        "title": "Douglas Tiffany Yorkie",
+        "year": 1996,
+        "location": "Dhaka",
+        "resale_price": "$550",
+        "original_price": "$750"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "2",
+        "image": "https://ibb.co/MGrDfbW",
+        "title": "Stafford Dog",
+        "year": 1996,
+        "location": "Dhaka",
+        "resale_price": "$450",
+        "original_price": "$650"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "2",
+        "image": "https://ibb.co/LNb7Y60",
+        "title": "German Shepherd Dog",
+        "year": 2008,
+        "location": "Dhaka",
+        "resale_price": "$750",
+        "original_price": "$850"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "3",
+        "image": "https://ibb.co/xhtxksR",
+        "title": "Angora Rabbit",
+        "year": 1998,
+        "location": "Dhaka",
+        "resale_price": "$750",
+        "original_price": "$850"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "3",
+        "image": "https://ibb.co/XLZ2bR6",
+        "title": "Dwarf Hotot",
+        "year": 1999,
+        "location": "Dhaka",
+        "resale_price": "$650",
+        "original_price": "$750"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "3",
+        "image": "https://ibb.co/F0QzSL0",
+        "title": "Polish Rabbit",
+        "year": 2000,
+        "location": "Dhaka",
+        "resale_price": "$550",
+        "original_price": "$700"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "3",
+        "image": "https://ibb.co/P4Zmx1Q",
+        "title": "Grand Chinchilla",
+        "year": 2010,
+        "location": "Dhaka",
+        "resale_price": "$750",
+        "original_price": "$800"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "3",
+        "image": "https://ibb.co/sF0SXYt",
+        "title": "Lionhead Rabbit",
+        "year": 2011,
+        "location": "Dhaka",
+        "resale_price": "$650",
+        "original_price": "$750"
+    },
+    {
+        "seller": "Joseph B",
+        "cate_id": "3",
+        "image": "https://ibb.co/1QgwG8p",
+        "title": "New Zealand Rabbit",
+        "year": 1997,
+        "location": "Dhaka",
+        "resale_price": "$750",
+        "original_price": "$850"
+    },
+    {
+        "seller": "Charles Catton",
+        "cate_id": "3",
+        "image": "https://ibb.co/C5qCtJf",
+        "title": "Cottontail Rabbit",
+        "year": 2007,
+        "location": "Dhaka",
+        "resale_price": "$750",
+        "original_price": "$950"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "3",
+        "image": "https://ibb.co/FYJJ6KF",
+        "title": "Rex Rabbit",
+        "year": 2010,
+        "location": "Dhaka",
+        "resale_price": "$650",
+        "original_price": "$750"
+    },
+    {
+        "seller": "Conley, Kate",
+        "cate_id": "3",
+        "image": "https://ibb.co/XbF6qsf",
+        "title": "Arctic Rabbit",
+        "year": 2012,
+        "location": "Dhaka",
+        "resale_price": "$550",
+        "original_price": "$700"
+    }
+]
