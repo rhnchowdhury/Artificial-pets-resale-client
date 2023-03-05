@@ -4,9 +4,10 @@ import img2 from '../../../assets/dog-1.jpeg';
 
 
 const Slider = () => {
+    // #FBF4DE
     return (
-        <div>
-            <div className="carousel mt-5 lg:w-full bg-base-700 rounded-xl my-4">
+        <div className='m-10'>
+            <div className="carousel mt-5 lg:w-full rounded-xl my-4" style={{ background: '#FBF4DE', borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }}>
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className="hero">
                         <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
