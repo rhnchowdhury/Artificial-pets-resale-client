@@ -7,12 +7,11 @@ const AllCategories = () => {
     console.log(categories)
     return (
         <div>
-            <h1>test</h1>
-            {/* <div >
+            <div className='grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     categories.map(category => <AllCategoriesCard key={category.id} category={category}></AllCategoriesCard>)
                 }
-            </div> */}
+            </div>
         </div>
     );
 };

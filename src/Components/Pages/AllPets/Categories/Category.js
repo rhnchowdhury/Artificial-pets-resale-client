@@ -5,7 +5,7 @@ const Category = () => {
     const [pets, setPets] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/list')
+        fetch('http://localhost:5000/pets')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

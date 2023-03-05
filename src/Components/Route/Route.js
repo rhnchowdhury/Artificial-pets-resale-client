@@ -35,7 +35,7 @@ const router = createBrowserRouter([
             {
                 path: '/category/:id',
                 loader: async ({ params }) => {
-                    return fetch(`cat.json/category/${params.id}`)
+                    return fetch(`http://localhost:5000/allPets/${params.id}`)
                 },
                 element: <AllCategories></AllCategories>
                 // loader: ({ params }) => fetch(`cat.json/category/${params.cate_id}`)
