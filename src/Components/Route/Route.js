@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../Layout/DashboardLayout";
 import Main from "../Layout/Main";
 import AllCategories from "../Pages/AllPets/AllCategories/AllCategories";
 import Blog from "../Pages/Blogs/Blog";
-import Dashboard from "../Pages/Dashboard/Dashboard";
+import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
 import Home from "../Pages/Home/Home";
 import LoginProcess from "../Registers/Login/LoginProcess";
 import SignUp from "../Registers/SignUP/SignUp";
@@ -28,10 +29,6 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>
-            }
-            , {
-                path: '/dashboard',
-                element: <Dashboard></Dashboard>
             },
             {
                 path: '/category/:id',
@@ -39,6 +36,16 @@ const router = createBrowserRouter([
                     return fetch(`http://localhost:5000/allPets/${params.id}`)
                 },
                 element: <PrivateRoute><AllCategories></AllCategories></PrivateRoute>
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <MyOrders></MyOrders>
             }
         ]
     }
