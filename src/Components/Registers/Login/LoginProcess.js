@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../Context/AuthProvider';
 import Login from './Login';
 
 const LoginProcess = () => {
+    const { googleSignIn } = useContext(AuthContext);
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(err => console.log(err));
+    }
+
     return (
         <div >
             <h1 className="text-4xl font-bold text-orange-600 text-center my-12">Login Process</h1>
@@ -25,7 +37,7 @@ const LoginProcess = () => {
             </div>
             <div className="divider">OR</div>
             <div className='card-actions justify-center my-14'>
-                <button className='btn btn-outline btn-info w-full max-w-xs'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info w-full max-w-xs'>CONTINUE WITH GOOGLE</button>
 
             </div>
         </div>
