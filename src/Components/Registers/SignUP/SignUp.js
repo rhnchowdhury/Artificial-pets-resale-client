@@ -30,7 +30,6 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUser(data.name, data.email);
-
                     })
                     .catch(err => console.error(err));
             })
