@@ -6,6 +6,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import Home from "../Pages/Home/Home";
 import LoginProcess from "../Registers/Login/LoginProcess";
 import SignUp from "../Registers/SignUP/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -37,8 +38,7 @@ const router = createBrowserRouter([
                 loader: async ({ params }) => {
                     return fetch(`http://localhost:5000/allPets/${params.id}`)
                 },
-                element: <AllCategories></AllCategories>
-                // loader: ({ params }) => fetch(`cat.json/category/${params.cate_id}`)
+                element: <PrivateRoute><AllCategories></AllCategories></PrivateRoute>
             }
         ]
     }

@@ -13,7 +13,7 @@ const Header = () => {
 
     const menuItems = <React.Fragment>
         <li><Link to='/' className='text-white bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Home</Link></li>
-        <li><Link to='/blog' className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Blog</Link></li>
+
         {
             user?.uid ?
                 <>
@@ -21,8 +21,9 @@ const Header = () => {
                     <li><Link onClick={handleLogOut} className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sign Out</Link></li>
                 </>
                 :
-                <li><Link to='/login' className='text-white'>Log in</Link></li>
+                <li><Link to='/login' className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Log in</Link></li>
         }
+        <li><Link to='/blog' className='text-white hover:bg-red-400' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Blog</Link></li>
     </React.Fragment >
     return (
         <div>
