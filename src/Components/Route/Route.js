@@ -4,6 +4,7 @@ import Main from "../Layout/Main";
 import AllCategories from "../Pages/AllPets/AllCategories/AllCategories";
 import Blog from "../Pages/Blogs/Blog";
 import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
+import Payment from "../Pages/Dashboard/Payments/Payment";
 import Home from "../Pages/Home/Home";
 import LoginProcess from "../Registers/Login/LoginProcess";
 import SignUp from "../Registers/SignUP/SignUp";
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyOrders></MyOrders>
+            },
+            {
+                path: '/dashboard/payment',
+                element: <Payment></Payment>
             }
         ]
     }
