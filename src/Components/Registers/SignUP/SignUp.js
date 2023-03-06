@@ -22,14 +22,32 @@ const SignUp = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/');
+                        saveUser(data.name, data.email);
+
                     })
                     .catch(err => console.error(err));
             })
             .catch(err => {
                 setSignError(err.message)
             });
-    }
+    };
+
+    // All user saved in database
+    const saveUser = (name, email) => {
+        const user = { name, email };
+        fetch('https://mobile-garage-server-ten.vercel.app/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                navigate('/');
+            })
+    };
+
     return (
         <div className='flex justify-center items-center my-20'>
             <div>
