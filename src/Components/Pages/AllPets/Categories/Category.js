@@ -13,7 +13,7 @@ const Category = () => {
             })
     }, [])
     return (
-        <div className='grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-5 my-10' style={{ background: '#f5f5f5' }}>
             {
                 pets.map(pet => <CategoryCard key={pet.cate_id} pet={pet}></CategoryCard>)
             }

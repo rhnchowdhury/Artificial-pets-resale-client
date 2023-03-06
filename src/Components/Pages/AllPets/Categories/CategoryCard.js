@@ -14,7 +14,6 @@ const CategoryCard = ({ pet }) => {
                     </div>
                 </div>
             </div>
-            {/* #675444 */}
         </div>
     );
 };

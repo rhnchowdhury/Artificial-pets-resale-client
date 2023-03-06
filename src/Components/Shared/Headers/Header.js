@@ -45,7 +45,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Get started</Link>
+                    <Link className="btn btn-outline text-white hover:bg-red-400" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Get started</Link>
                 </div>
             </div>
         </div>
