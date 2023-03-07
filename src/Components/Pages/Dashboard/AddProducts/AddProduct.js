@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
+    const imgHostKey = process.env.REACT_APP_imgBB_key;
 
     const { data: categories, isLoading } = useQuery({
         queryKey: ['productCategory'],
@@ -30,8 +31,33 @@ const AddProduct = () => {
         );
     }
 
-    const handleAddProducts = event => {
-        console.log(event)
+    const handleAddProducts = data => {
+        const image = data.image[0];
+        const formData = new FormData();
+        formData.append('image', image);
+        const url = `https://api.imgbb.com/1/upload?key=${imgHostKey}`;
+        fetch(url, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgData => {
+                if (imgData.success) {
+                    console.log(imgData.data.url);
+
+                    const products = {
+                        productName: data.name,
+                        productPrice: data.price,
+                        productCategory: data.category,
+                        productType: data.type,
+                        phone: data.phone,
+                        productAddress: data.address,
+                        productDes: data.title,
+                        purchaseYear: data.year,
+                        productImg: imgData.data.url
+                    };
+                };
+            });
     };
 
     return (
