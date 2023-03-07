@@ -15,9 +15,9 @@ const AllBuyer = () => {
     const handleAdmin = id => {
         fetch(`http://localhost:5000/users/admin/${id}`, {
             method: 'PUT',
-            // headers: {
-            //     authorization: `bearer ${localStorage.getItem('accessToken')}`
-            // }
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
         })
             .then(res => res.json())
             .then(data => {

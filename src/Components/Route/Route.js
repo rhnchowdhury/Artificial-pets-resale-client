@@ -10,6 +10,7 @@ import Payment from "../Pages/Dashboard/Payments/Payment";
 import Home from "../Pages/Home/Home";
 import LoginProcess from "../Registers/Login/LoginProcess";
 import SignUp from "../Registers/SignUP/SignUp";
+import AdminRoute from "./AdminRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -60,7 +61,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/users',
-                element: <AllBuyer></AllBuyer>
+                element: <AdminRoute><AllBuyer></AllBuyer></AdminRoute>
             }
         ]
     }
