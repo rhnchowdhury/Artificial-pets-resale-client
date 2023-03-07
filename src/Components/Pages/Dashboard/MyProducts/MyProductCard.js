@@ -1,9 +1,9 @@
 import React from 'react';
 
 const MyProductCard = ({ product }) => {
-    const { productName, productImg, productPrice } = product;
+    const { productName, productImg, productPrice, productCategory, productType, productAddress, purchaseYear } = product;
     return (
-        <div className='card-actions justify-center'>
+        <div className=''>
             <div className="card w-80 glass">
                 <figure><img src={productImg} alt="car!" className='h-60 w-80' /></figure>
                 <div className="card-body">

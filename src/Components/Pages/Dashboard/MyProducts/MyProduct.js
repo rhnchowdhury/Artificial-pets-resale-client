@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import MyProductCard from './MyProductCard';
+import { Link } from 'react-router-dom';
 
 const MyProduct = () => {
     const { data: products, isLoading } = useQuery({
@@ -35,11 +35,37 @@ const MyProduct = () => {
             </div>
         );
     };
+
     return (
-        <div>
-            {
-                products.map(product => <MyProductCard key={product._id} product={product}></MyProductCard>)
-            }
+        <div className='m-4 lg:m-12'>
+            <div className="overflow-x-auto">
+                <table className="table w-full">
+                    <thead>
+                        <tr>
+                            <th>Picture</th>
+                            <th>Price</th>
+                            <th>Sales Status</th>
+                            <th>Delete</th>
+                            <th>For Advertisement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            products.map((product, i) => <tr key={product._id}>
+                                <td><div className="avatar">
+                                    <div className="w-12 rounded-full">
+                                        <img src={product.productImg} alt='' />
+                                    </div>
+                                </div></td>
+                                <td>{product.productPrice}</td>
+                                <td>Available</td>
+                                <td><Link> <button className='bg-yellow-500 p-2 rounded-md text-white'>Delete</button></Link></td>
+                                <td><Link> <button className='bg-red-400 p-2 text-white' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Add to Advertise</button></Link></td>
+                            </tr>)
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

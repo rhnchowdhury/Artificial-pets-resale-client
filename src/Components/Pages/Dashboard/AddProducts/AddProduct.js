@@ -134,7 +134,7 @@ const AddProduct = () => {
                         <input type='file' placeholder='Purchase Year' {...register("image")}
                             className="input input-bordered w-full max-w-xs" />
                     </div>
-                    <input className='btn btn-active mt-4 w-full max-w-xs' value='Sign Up' type="submit" />
+                    <input className='btn btn-active mt-4 w-full max-w-xs' value='Add Products' type="submit" />
                 </form>
             </div>
         </div>
