@@ -1,11 +1,13 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
     const imgHostKey = process.env.REACT_APP_imgBB_key;
+    const navigate = useNavigate();
 
     const { data: categories, isLoading } = useQuery({
         queryKey: ['productCategory'],
@@ -56,6 +58,21 @@ const AddProduct = () => {
                         purchaseYear: data.year,
                         productImg: imgData.data.url
                     };
+
+                    // save addProducts into database
+                    fetch('http://localhost:5000/products', {
+                        method: 'POST',
+                        headers: {
+                            'content-type': 'application/json'
+                        },
+                        body: JSON.stringify(products)
+                    })
+                        .then(res => res.json())
+                        .then(result => {
+                            console.log(result);
+                            toast.success(`${data.name} is added successfully`);
+                            navigate('/dashboard/product');
+                        })
                 };
             });
     };
