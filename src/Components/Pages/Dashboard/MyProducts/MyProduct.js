@@ -60,6 +60,7 @@ const MyProduct = () => {
                     <thead>
                         <tr>
                             <th>Picture</th>
+                            <th>Name</th>
                             <th>Price</th>
                             <th>Sales Status</th>
                             <th>Delete</th>
@@ -74,6 +75,7 @@ const MyProduct = () => {
                                         <img src={product.productImg} alt='' />
                                     </div>
                                 </div></td>
+                                <td>{product.productName}</td>
                                 <td>{product.productPrice}</td>
                                 <td>Available</td>
                                 <td><Link> <button onClick={() => handleDelete(product)} className='bg-yellow-500 p-2 rounded-md text-white'>Delete</button></Link></td>
