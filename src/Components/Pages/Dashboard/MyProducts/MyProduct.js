@@ -1,9 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
+import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 
 const MyProduct = () => {
-    const { data: products, isLoading } = useQuery({
+    const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             try {
@@ -35,6 +36,22 @@ const MyProduct = () => {
             </div>
         );
     };
+    const handleDelete = product => {
+        fetch(`http://localhost:5000/products/${product._id}`, {
+            method: 'DELETE',
+            headers: {
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount) {
+                    refetch();
+                    toast.success('Product Deleted');
+                }
+
+            })
+    }
 
     return (
         <div className='m-4 lg:m-12'>
@@ -53,13 +70,13 @@ const MyProduct = () => {
                         {
                             products.map((product, i) => <tr key={product._id}>
                                 <td><div className="avatar">
-                                    <div className="w-12 rounded-full">
+                                    <div className="w-14 rounded-full">
                                         <img src={product.productImg} alt='' />
                                     </div>
                                 </div></td>
                                 <td>{product.productPrice}</td>
                                 <td>Available</td>
-                                <td><Link> <button className='bg-yellow-500 p-2 rounded-md text-white'>Delete</button></Link></td>
+                                <td><Link> <button onClick={() => handleDelete(product)} className='bg-yellow-500 p-2 rounded-md text-white'>Delete</button></Link></td>
                                 <td><Link> <button className='bg-red-400 p-2 text-white' style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Add to Advertise</button></Link></td>
                             </tr>)
                         }
