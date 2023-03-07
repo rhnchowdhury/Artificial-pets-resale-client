@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const AddProduct = () => {
     const { register, handleSubmit } = useForm();
@@ -31,7 +31,7 @@ const AddProduct = () => {
                 </div>
             </div>
         );
-    }
+    };
 
     const handleAddProducts = data => {
         const image = data.image[0];
@@ -135,8 +135,6 @@ const AddProduct = () => {
                             className="input input-bordered w-full max-w-xs" />
                     </div>
                     <input className='btn btn-active mt-4 w-full max-w-xs' value='Sign Up' type="submit" />
-
-                    {/* <p>Already have an account? <Link to='/login' className='text-accent font-bold'>Please Login</Link></p> */}
                 </form>
             </div>
         </div>
