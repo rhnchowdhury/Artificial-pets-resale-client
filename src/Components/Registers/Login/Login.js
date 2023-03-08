@@ -6,7 +6,7 @@ import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { login } = useContext(AuthContext);
+    const { login, googleSignIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     const [loginUserEmail, setLoginUserEmail] = useState('');
     const location = useLocation();
@@ -32,6 +32,15 @@ const Login = () => {
             .catch(err => {
                 setLoginError(err.message);
             });
+    };
+
+    const handleGoogleSignIn = () => {
+        googleSignIn()
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(err => console.log(err));
     }
     return (
         <div className='flex justify-center items-center my-20'>
@@ -71,6 +80,10 @@ const Login = () => {
                     {loginError && <p className='text-error'>{loginError}</p>}
                     <p>New to Artificial Pets? <Link to='/signup' className='text-orange-600 font-bold'>Create an account</Link></p>
                 </form>
+                <div className="divider">OR</div>
+                <div className='card-actions justify-center'>
+                    <button onClick={handleGoogleSignIn} className='btn btn-outline btn-info w-full max-w-xs'>CONTINUE WITH GOOGLE</button>
+                </div>
             </div>
 
         </div>

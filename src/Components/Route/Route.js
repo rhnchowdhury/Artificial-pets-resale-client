@@ -9,7 +9,7 @@ import MyOrders from "../Pages/Dashboard/MyOrders/MyOrders";
 import MyProduct from "../Pages/Dashboard/MyProducts/MyProduct";
 import Payment from "../Pages/Dashboard/Payments/Payment";
 import Home from "../Pages/Home/Home";
-import LoginProcess from "../Registers/Login/LoginProcess";
+import Login from "../Registers/Login/Login";
 import SignUp from "../Registers/SignUP/SignUp";
 import AdminRoute from "./AdminRoute/AdminRoute";
 import PrivateRoute from "./PrivateRoute";
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <LoginProcess></LoginProcess>
+                element: <Login></Login>
             },
             {
                 path: '/signup',
