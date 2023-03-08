@@ -1,16 +1,15 @@
 import { useQuery } from '@tanstack/react-query';
-import React, { useContext } from 'react';
+import React from 'react';
 import { toast } from 'react-hot-toast';
 import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../../Context/AuthProvider';
 
 const MyProduct = () => {
-    const { user } = useContext(AuthContext);
+
     const { data: products, isLoading, refetch } = useQuery({
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch(`http://localhost:5000/products?email=${user?.email}`, {
+                const res = await fetch('http://localhost:5000/products', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }
@@ -61,6 +60,7 @@ const MyProduct = () => {
                 <table className="table w-full">
                     <thead>
                         <tr>
+                            <th></th>
                             <th>Picture</th>
                             <th>Name</th>
                             <th>Price</th>
@@ -77,6 +77,8 @@ const MyProduct = () => {
                                         <img src={product.productImg} alt='' />
                                     </div>
                                 </div></td>
+
+                                <td>{i + 1}</td>
                                 <td>{product.productName}</td>
                                 <td>{product.productPrice}</td>
                                 <td>Available</td>

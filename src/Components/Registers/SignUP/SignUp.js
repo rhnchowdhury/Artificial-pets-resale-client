@@ -9,6 +9,8 @@ const SignUp = () => {
     const { createUser, updateUser } = useContext(AuthContext);
     const [signError, setSignError] = useState('');
     const [createdUserEmail, setCreatedUserEmail] = useState('');
+    // const [useButton, setUseButton] = useState(false);
+    // console.log(useButton)
     const navigate = useNavigate();
     const [token] = useToken(createdUserEmail);
 
@@ -30,6 +32,7 @@ const SignUp = () => {
                 updateUser(userInfo)
                     .then(() => {
                         saveUser(data.name, data.email);
+                        // saveUser(data.name, data.email, data.role);
                     })
                     .catch(err => console.error(err));
             })
@@ -41,6 +44,8 @@ const SignUp = () => {
     // All user saved in database
     const saveUser = (name, email) => {
         const user = { name, email };
+        // const saveUser = (name, email, role) => {
+        //     const user = { name, email, role };
         fetch('http://localhost:5000/users', {
             method: 'POST',
             headers: {
@@ -54,8 +59,19 @@ const SignUp = () => {
             })
     };
 
+    // const handleButton = () => {
+    //     setUseButton(useButton => !useButton)
+    // };
+    // const buttonToggle = useButton ? 'seller' : 'buyer';
+
     return (
         <div className='flex justify-center items-center my-20'>
+            {/* <div className="form-control w-full mt-7 mb-3">
+                <label className="cursor-pointer label">
+                    <span className="label-text font-medium">{buttonToggle}</span>
+                    <input onClick={handleButton} type="checkbox" className="toggle toggle-accent" {...register("role")} />
+                </label>
+            </div> */}
             <div>
                 <h1 className="text-4xl font-bold text-center text-orange-600">Sign Up!</h1>
                 <form onSubmit={handleSubmit(handleSignIn)}>
