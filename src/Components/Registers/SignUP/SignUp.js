@@ -67,7 +67,7 @@ const SignUp = () => {
         <div className='m-10 py-5' style={{ background: '#FBF4DE', borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }}>
             <div className='card-actions justify-center mt-10'>
                 <div>
-                    <h1 className="text-2xl font-bold text-center" style={{ color: "#675444" }}>What do you want?<br />Please Select ...</h1>
+                    <h1 className="text-2xl font-bold text-center" style={{ color: "#675444" }}>What do you want ?<br />Please Select ...</h1>
                     <div className='card-actions justify-center mt-5'>
                         <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sell</label>
                         <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Buy</label>
