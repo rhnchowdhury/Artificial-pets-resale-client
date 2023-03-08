@@ -12,6 +12,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Registers/Login/Login";
 import SignUp from "../Registers/SignUP/SignUp";
 import AdminRoute from "./AdminRoute/AdminRoute";
+import ErrorPage from "./ErrorRoute/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
                     return fetch(`http://localhost:5000/allPets/${params.id}`)
                 },
                 element: <PrivateRoute><AllCategories></AllCategories></PrivateRoute>
+            },
+            {
+                path: '/*',
+                element: <ErrorPage></ErrorPage>
             }
         ]
     },
