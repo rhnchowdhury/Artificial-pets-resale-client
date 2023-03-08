@@ -1,7 +1,8 @@
 import React from 'react';
 import img1 from '../../../assets/dogs.webp';
 import img2 from '../../../assets/dog-1.jpeg';
-
+import img3 from '../../../assets/cat.webp';
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
 
@@ -24,7 +25,7 @@ const Slider = () => {
                 <div id="slide2" className="carousel-item relative w-full">
                     <div className="hero">
                         <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
-                            <img src={img2} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg shadow-2xl" />
+                            <img src={img2} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg" />
                             <div className='mr-28'>
                                 <h1 className=" text-4xl font-bold mb-4 mt-2">Sell Your Old Pets<br />at the Best Price</h1>
                                 <p className="text-xl font-medium">Free Pickup | Instant Cash</p>
@@ -33,10 +34,23 @@ const Slider = () => {
                         </div>
                     </div>
                 </div>
+                <div id="slide3" className="carousel-item relative w-full">
+                    <div className="hero">
+                        <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
+                            <img src={img3} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg" />
+                            <div className='mr-28'>
+                                <h1 className=" text-4xl font-bold mb-4 mt-2">Take 15% off On<br />Your first Purchase</h1>
+                                <p className="text-xl font-medium">Free Pickup | Use Codes AP15</p>
+                                <button className="btn btn-secondary mt-4" style={{ background: '#F9BE4F', border: '1px solid #F9BE4F' }}>Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="flex justify-end w-full py-2 gap-2">
-                <a href="#slide1" className="btn btn-xs">1</a>
-                <a href="#slide2" className="btn btn-xs">2</a>
+            <div className="flex justify-end w-full py-2 gap-2" >
+                <a href="#slide1" className="btn btn-xs bg-amber-600 hover:bg-red-500" style={{ border: '0px solid' }}></a>
+                <a href="#slide2" className="btn btn-xs bg-red-500" style={{ border: '0px solid' }}></a>
+                <a href="#slide3" className="btn btn-xs bg-amber-600 hover:bg-red-500" style={{ border: '0px solid' }}></a>
             </div>
         </div>
     );

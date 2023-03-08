@@ -5,7 +5,7 @@ const Blog = () => {
 
         <div className='m-2 my-4 lg:m-24 p-6 lg:p-20' style={{ background: '#f5f5f5', borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>
             <div tabIndex={0} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                <div className="collapse-title text-xl font-medium">
+                <div className="collapse-title lg:text-xl font-medium">
                     What are the different ways to manage a state in a React application?
                 </div>
                 <div className="collapse-content">
@@ -21,7 +21,7 @@ const Blog = () => {
                 </div>
             </div>
             <div tabIndex={1} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                <div className="collapse-title text-xl font-medium">
+                <div className="collapse-title lg:text-xl font-medium">
                     How does prototypical inheritance work?
                 </div>
                 <div className="collapse-content">
@@ -29,7 +29,7 @@ const Blog = () => {
                 </div>
             </div>
             <div tabIndex={2} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                <div className="collapse-title text-xl font-medium">
+                <div className="collapse-title lg:text-xl font-medium">
                     What is a unit test? Why should we write unit tests?
                 </div>
                 <div className="collapse-content">
@@ -46,7 +46,7 @@ const Blog = () => {
                 </div>
             </div>
             <div tabIndex={3} className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
-                <div className="collapse-title text-xl font-medium">
+                <div className="collapse-title lg:text-xl font-medium">
                     What is the difference between React vs. Angular vs. Vue?
                 </div>
                 <div className="collapse-content">
