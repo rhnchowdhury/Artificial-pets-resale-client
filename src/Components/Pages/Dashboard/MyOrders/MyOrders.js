@@ -42,7 +42,15 @@ const MyOrders = () => {
                                 <td>{books.petsName}</td>
                                 <td><img src={books.petsImg} className='w-12 h-12' alt='' /></td>
                                 <td>{books.petsPrice}</td>
-                                <Link to='/dashboard/payment'> <button className='btn btn-outline mt-2'>Payment</button></Link>
+                                <td>
+                                    {
+                                        books.petsPrice && !books.paid && <Link to={`/dashboard/payment/${books._id}`}> <button className='btn btn-outline mt-2'>Payment</button></Link>
+                                    }
+                                    {
+                                        books.petsPrice && books.paid && <span className='text-primary'>Paid</span>
+                                    }
+                                </td>
+
                             </tr>)
                         }
                     </tbody>
