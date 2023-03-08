@@ -64,22 +64,21 @@ const SignUp = () => {
     };
 
     return (
-        <div>
+        <div className='m-10 py-5' style={{ background: '#FBF4DE', borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }}>
             <div className='card-actions justify-center mt-10'>
                 <div>
-                    <h1 className="text-2xl font-bold text-center text-orange-600">How do you want to Sign up? <br /> Please Select first</h1>
-                    <div className='card-actions justify-center'>
-                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error text-white">Buyer</label>
-                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error text-white">Seller</label>
+                    <h1 className="text-2xl font-bold text-center" style={{ color: "#675444" }}>What do you want?<br />Please Select ...</h1>
+                    <div className='card-actions justify-center mt-5'>
+                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sell</label>
+                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Buy</label>
                     </div>
                 </div>
             </div>
-            <div className='card-actions justify-center my-20'>
+            <div className='card-actions justify-center my-5'>
                 <div>
-                    <h1 className="text-4xl font-bold text-center text-orange-600">Sign Up!</h1>
                     <form onSubmit={handleSubmit(handleSignIn)}>
                         <div>
-                            <label className="label"><span className="label-text">Name</span></label>
+                            <label className="label"><span className="label-text font-bold" style={{ color: "#675444" }}>Name</span></label>
                             <input type='text' {...register("name", {
                                 required: "Name is required"
                             })}
@@ -87,7 +86,7 @@ const SignUp = () => {
                             {errors.name && <p className='text-error'>{errors.name?.message}</p>}
                         </div>
                         <div>
-                            <label className="label"><span className="label-text">Email</span></label>
+                            <label className="label"><span className="label-text font-bold" style={{ color: "#675444" }}>Email</span></label>
                             <input type='text' {...register("email", {
                                 required: "Email is required",
                             })}
@@ -95,7 +94,7 @@ const SignUp = () => {
                             {errors.email && <p className='text-error'>{errors.email?.message}</p>}
                         </div>
                         <div>
-                            <label className="label"><span className="label-text">Password</span></label>
+                            <label className="label"><span className="label-text font-bold" style={{ color: "#675444" }}>Password</span></label>
                             <input type='password' {...register("password", {
                                 required: "Password is required",
                                 minLength: { value: 6, message: "Password will be at least 6 characters" },
@@ -104,9 +103,9 @@ const SignUp = () => {
                                 className="input input-bordered w-full max-w-xs" />
                             {errors.password && <p className='text-error'>{errors.password?.message}</p>}
                         </div>
-                        <input className='btn btn-active mt-4 w-full max-w-xs' value='Sign Up' type="submit" />
+                        <input className='btn  mt-4 w-full max-w-xs' style={{ background: "#675444" }} value='Sign Up' type="submit" />
                         {signError && <p className='text-error'>{signError}</p>}
-                        <p>Already have an account? <Link to='/login' className='text-accent font-bold'>Please Login</Link></p>
+                        <p className='' style={{ color: "#675444" }}>Already have an account? <Link to='/login' className='text-yellow-500 font-bold'>Please Login</Link></p>
                     </form>
                 </div>
             </div>
