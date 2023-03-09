@@ -12,11 +12,11 @@ const Slider = () => {
                 <div id="slide1" className="carousel-item relative w-full">
                     <div className="hero">
                         <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
-                            <img src={img1} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg" />
+                            <img src={img1} alt='' className="max-w-sm h-80 lg:max-w-sm" style={{ borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }} />
                             <div className='mr-20'>
-                                <h1 className=" text-4xl font-bold mb-4 mt-2">Are You Ready For<br />Perfect Pets?</h1>
-                                <p className="text-xl font-medium">Get Flat 10% off an all Items Pets.</p>
-                                <p className="text-xl font-medium">Use Codes All10</p>
+                                <h1 className=" text-4xl font-bold mb-4 mt-2" style={{ color: "#675444" }}>Are You Ready For<br />Perfect Pets?</h1>
+                                <p className="text-xl font-medium" style={{ color: "#675444" }}>Get Flat 10% off an all Items Pets.</p>
+                                <p className="text-xl font-medium" style={{ color: "#675444" }}>Use Codes All10</p>
                                 <button className="btn btn-secondary mt-4" style={{ background: '#F9BE4F', border: '1px solid #F9BE4F' }}>Explore Now</button>
                             </div>
                         </div>
@@ -25,10 +25,10 @@ const Slider = () => {
                 <div id="slide2" className="carousel-item relative w-full">
                     <div className="hero">
                         <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
-                            <img src={img2} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg" />
+                            <img src={img2} alt='' className="max-w-sm h-80 lg:max-w-sm " style={{ borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }} />
                             <div className='mr-28'>
-                                <h1 className=" text-4xl font-bold mb-4 mt-2">Sell Your Old Pets<br />at the Best Price</h1>
-                                <p className="text-xl font-medium">Free Pickup | Instant Cash</p>
+                                <h1 className=" text-4xl font-bold mb-4 mt-2" style={{ color: "#675444" }}>Sell Your Old Pets<br />at the Best Price</h1>
+                                <p className="text-xl font-medium" style={{ color: "#675444" }}>Free Pickup | Instant Cash</p>
                                 <button className="btn btn-secondary mt-4" style={{ background: '#F9BE4F', border: '1px solid #F9BE4F' }}>Sell Now</button>
                             </div>
                         </div>
@@ -37,10 +37,10 @@ const Slider = () => {
                 <div id="slide3" className="carousel-item relative w-full">
                     <div className="hero">
                         <div className="hero-content flex-col gap-20 lg:flex-row-reverse">
-                            <img src={img3} alt='' className="max-w-sm h-80 lg:max-w-sm rounded-lg" />
+                            <img src={img3} alt='' className="max-w-sm h-80 lg:max-w-sm" style={{ borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }} />
                             <div className='mr-28'>
-                                <h1 className=" text-4xl font-bold mb-4 mt-2">Take 15% off On<br />Your first Purchase</h1>
-                                <p className="text-xl font-medium">Free Pickup | Use Codes AP15</p>
+                                <h1 className=" text-4xl font-bold mb-4 mt-2" style={{ color: "#675444" }}>Take 15% off On<br />Your first Purchase</h1>
+                                <p className="text-xl font-medium" style={{ color: "#675444" }}>Free Pickup | Use Codes AP15</p>
                                 <button className="btn btn-secondary mt-4" style={{ background: '#F9BE4F', border: '1px solid #F9BE4F' }}>Buy Now</button>
                             </div>
                         </div>
