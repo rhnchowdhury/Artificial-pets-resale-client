@@ -2,8 +2,7 @@ import React from 'react';
 import img1 from '../../../assets/dogs.webp';
 import img2 from '../../../assets/dog-1.jpeg';
 import img3 from '../../../assets/cat.webp';
-import { Link } from 'react-router-dom';
-import { BsCircleFill, IconName } from "react-icons/bs";
+import { BsCircleFill } from "react-icons/bs";
 
 const Slider = () => {
 
