@@ -63,14 +63,31 @@ const SignUp = () => {
 
     };
 
+    const buttonToggle = useButton ?
+        <>
+            <label className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sell</label>
+        </>
+        :
+        <>
+            <label className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Buy</label>
+        </>;
+
     return (
         <div className='m-10 py-5' style={{ background: '#FBF4DE', borderRadius: '155px 45px 225px 75px/15px 125px 15px 155px' }}>
             <div className='card-actions justify-center mt-10'>
                 <div>
                     <h1 className="text-2xl font-bold text-center" style={{ color: "#675444" }}>What do you want ?<br />Please Select ...</h1>
                     <div className='card-actions justify-center mt-5'>
-                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Sell</label>
-                        <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Buy</label>
+
+                        <div className="form-control w-32 mt-7 mb-3">
+                            <label className="cursor-pointer label">
+                                <span className="label-text font-medium">{buttonToggle}</span>
+                                <input onClick={handleButton} type="checkbox" className="toggle toggle-accent" {...register("role")} />
+                            </label>
+                        </div>
+
+
+                        {/* <label onClick={handleButton} htmlFor="my-modal-3" className="btn btn-error btn-sm text-white" {...register("role")} style={{ borderRadius: '355px 45px 225px 75px/15px 225px 15px 255px' }}>Buy</label> */}
                     </div>
                 </div>
             </div>
