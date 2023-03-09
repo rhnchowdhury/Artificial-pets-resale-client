@@ -28,9 +28,9 @@ const DashboardLayout = () => {
                         <li><Link to='/dashboard/add' className='text-orange-600 '>Add Products</Link></li>
                         {/* <li><Link to='/dashboard' className='text-orange-600'>My Orders</Link></li> */}
                         {
-                            isBuyer && <>
-                                <li><Link to='/dashboard' className='text-orange-600'>My Orders</Link></li>
-                            </>
+                            isBuyer &&
+                            <li><Link to='/dashboard' className='text-orange-600'>My Orders</Link></li>
+
                         }
                         {/* {isSeller &&
                             <>

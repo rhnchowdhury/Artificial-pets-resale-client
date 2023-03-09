@@ -1,5 +1,6 @@
 import React from 'react';
 import Category from '../AllPets/Categories/Category';
+import Contact from '../Contacts/Contact';
 import Slider from '../Sliders/Slider';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Category></Category>
+            <Contact></Contact>
         </div>
     );
 };
