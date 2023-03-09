@@ -3,6 +3,7 @@ import img1 from '../../../assets/dogs.webp';
 import img2 from '../../../assets/dog-1.jpeg';
 import img3 from '../../../assets/cat.webp';
 import { Link } from 'react-router-dom';
+import { BsCircleFill, IconName } from "react-icons/bs";
 
 const Slider = () => {
 
@@ -47,10 +48,10 @@ const Slider = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-end w-full py-2 gap-2" >
-                <a href="#slide1" className="btn btn-xs bg-amber-600 hover:bg-red-500" style={{ border: '0px solid' }}></a>
-                <a href="#slide2" className="btn btn-xs bg-red-500" style={{ border: '0px solid' }}></a>
-                <a href="#slide3" className="btn btn-xs bg-amber-600 hover:bg-red-500" style={{ border: '0px solid' }}></a>
+            <div className="flex justify-center w-full py-2 gap-2" >
+                <a href="#slide1" className=" text-amber-600 hover:text-red-500" style={{ border: '0px solid' }}><BsCircleFill></BsCircleFill></a>
+                <a href="#slide2" className=" text-red-500 hover:text-amber-600" style={{ border: '0px solid' }}><BsCircleFill></BsCircleFill></a>
+                <a href="#slide3" className=" text-amber-600 hover:text-red-500" style={{ border: '0px solid' }}><BsCircleFill></BsCircleFill></a>
             </div>
         </div>
     );
