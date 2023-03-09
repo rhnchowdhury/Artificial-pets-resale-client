@@ -4,6 +4,7 @@ import router from './Components/Route/Route';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
+
   return (
     <div>
       <RouterProvider router={router}>

@@ -12,6 +12,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Registers/Login/Login";
 import SignUp from "../Registers/SignUP/SignUp";
 import AdminRoute from "./AdminRoute/AdminRoute";
+import BuyerRoute from "./BuyerRoute/BuyerRoute";
 import ErrorPage from "./ErrorRoute/ErrorPage";
 import PrivateRoute from "./PrivateRoute";
 import SellerRoute from "./SellerRoute/SellerRoute";
@@ -52,11 +53,11 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard',
-        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        element: <DashboardLayout></DashboardLayout>,
         children: [
             {
                 path: '/dashboard',
-                element: <MyOrders></MyOrders>
+                element: <BuyerRoute><MyOrders></MyOrders></BuyerRoute>
             },
             // {
             //     path: '/dashboard/payment/:id',
@@ -65,11 +66,13 @@ const router = createBrowserRouter([
             // },
             {
                 path: '/dashboard/add',
-                element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+                // element: <SellerRoute><AddProduct></AddProduct></SellerRoute>
+                element: <AddProduct></AddProduct>
             },
             {
                 path: '/dashboard/product',
-                element: <SellerRoute><MyProduct></MyProduct></SellerRoute>
+                // element: <SellerRoute><MyProduct></MyProduct></SellerRoute>
+                element: <MyProduct></MyProduct>
             },
             {
                 path: '/dashboard/users',
