@@ -12,7 +12,7 @@ const AddProduct = () => {
     const { data: categories, isLoading } = useQuery({
         queryKey: ['productCategory'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/petsName');
+            const res = await fetch('https://artificial-pets-server.vercel.app/petsName');
             const data = await res.json();
             return data;
         }
@@ -60,7 +60,7 @@ const AddProduct = () => {
                     };
 
                     // save addProducts into database
-                    fetch('http://localhost:5000/products', {
+                    fetch('https://artificial-pets-server.vercel.app/products', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json'

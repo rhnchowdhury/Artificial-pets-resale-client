@@ -27,7 +27,7 @@ const BookModal = ({ booked, setBooked }) => {
             Address: address
         };
 
-        fetch('http://localhost:5000/booking', {
+        fetch('https://artificial-pets-server.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

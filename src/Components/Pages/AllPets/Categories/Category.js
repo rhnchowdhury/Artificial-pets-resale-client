@@ -5,7 +5,7 @@ const Category = () => {
     const [pets, setPets] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/pets')
+        fetch('https://artificial-pets-server.vercel.app/pets')
             .then(res => res.json())
             .then(data => {
                 console.log(data)

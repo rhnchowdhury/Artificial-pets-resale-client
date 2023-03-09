@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             {
                 path: '/category/:id',
                 loader: async ({ params }) => {
-                    return fetch(`http://localhost:5000/allPets/${params.id}`)
+                    return fetch(`https://artificial-pets-server.vercel.app/allPets/${params.id}`)
                 },
                 element: <PrivateRoute><AllCategories></AllCategories></PrivateRoute>
             },
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             // {
             //     path: '/dashboard/payment/:id',
             //     element: <Payment></Payment>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/booking/${params.id}`)
+            //     loader: ({ params }) => fetch(`https://artificial-pets-server.vercel.app/booking/${params.id}`)
             // },
             {
                 path: '/dashboard/add',

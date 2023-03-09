@@ -13,7 +13,7 @@ const CheckOutForm = ({ pay }) => {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://artificial-pets-server.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -57,7 +57,7 @@ const CheckOutForm = ({ pay }) => {
                         email: userEmail
                     }
                 },
-                // return_url: 'http://localhost:5000/create-payment-intent'
+                // return_url: 'https://artificial-pets-server.vercel.app/create-payment-intent'
             }
         );
 
