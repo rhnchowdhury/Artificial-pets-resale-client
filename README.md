@@ -72,3 +72,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ## Admin:
 monika@gmail.com
 Pass: @Mm115599
+
+# Web site link:
+https://artificial-pets.netlify.app/
